@@ -1,0 +1,77 @@
+INIT 20/11/2022
+LOAD_DATA data/people.csv data/locations.csv data/visits.csv
+
+# Invalid Command
+TEST_COMMAND Please Ignore
+
+# Get person
+GET_PERSON John
+GET_PERSON Raymond
+
+GET_PERSON Hector 1/11/2022 10/11/2022
+GET_PERSON Mary 3/11/2022 8/11/2022
+
+# Get person that doesnt exist
+GET_PERSON Samwise
+
+# Get location
+GET_LOCATION Gym
+GET_LOCATION University
+GET_LOCATION Supermarket
+GET_LOCATION Restaurant 1/11/2022 5/11/2022
+GET_LOCATION Supermarket 5/11/2022 10/11/2022
+
+# Get location that doesn't exist
+GET_LOCATION Mordor
+
+# List Contacts
+LIST_CONTACTS Hector 1
+LIST_CONTACTS Mary 2
+LIST_CONTACTS Roberta 3
+
+# Identify source
+TRACE_PATH Kathleen
+TRACE_PATH Jim
+TRACE_PATH Moira
+
+# Add people
+
+ADD_PERSON Damon
+ADD_PERSON Leroy
+ADD_PERSON Nelson 
+
+# Add person that already exists
+ADD_PERSON Hector
+
+# Add location
+ADD_LOCATION Party
+ADD_LOCATION Bar
+
+# Add location that already exists
+ADD_LOCATION Gym
+
+# Add visit
+ADD_VISIT Mary Bar 5/11/2022 19:00 22:00
+ADD_VISIT Damon Hospital 7/11/2022 8:00 17:00
+ADD_VISIT Damon Hospital 8/11/2022 8:00 17:00
+ADD_VISIT Damon Party 6/11/2022 8:00 17:00
+
+# Add new cases
+NEW_CASE Leroy 25/10/2022 52020/11/
+NEW_CASE Damon 5/11/2022
+NEW_CASE Nelson 5/11/2022 18/11/2022
+
+# Identify source
+ADD_PERSON Julie
+ADD_VISIT Julie Hospital 8/11/2022 16:00 18:00
+NEW_CASE Julie
+TRACE_PATH Julie
+
+# Identify path
+ADD_PERSON Melissa 
+ADD_VISIT Melissa Hospital 8/11/2022 15:00 17:00
+NEW_CASE Melissa
+TRACE_PATH Melissa
+
+
+
